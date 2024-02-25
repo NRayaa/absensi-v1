@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\PresentController;
+use App\Http\Controllers\SubjectController;
+use App\Http\Controllers\TeacherController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,3 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('teacher', TeacherController::class);
+Route::resource('subject', SubjectController::class);
+Route::resource('present', PresentController::class);
